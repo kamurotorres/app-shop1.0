@@ -18,6 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            //para deferencia que tipo de rol es el usuario
+            $table->boolean('admin')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });
